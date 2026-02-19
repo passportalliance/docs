@@ -7,6 +7,7 @@ export default defineConfig({
     starlight({
       title: 'Passport Alliance',
       description: 'The identity standard for AI agents.',
+      favicon: '/favicon.svg',
       logo: {
         src: './src/assets/passport-alliance-logo.svg',
         alt: 'Passport Alliance'
