@@ -32,3 +32,7 @@ Yes. Any software delegate that meets key, signature, mandate, and revocation re
 ## Where are the canonical API contracts?
 
 Use the artifacts in [Reference Downloads](/reference/downloads/).
+
+## How do I contact Passport Alliance to contribute?
+
+For contributor discussions and partnership-level collaboration, email [partnerships@aetherpro.tech](mailto:partnerships@aetherpro.tech).

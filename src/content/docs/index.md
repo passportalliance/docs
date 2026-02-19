@@ -44,3 +44,12 @@ Autonomous software agents can already call APIs, move money, and operate infras
 - Registry model: Signed, mirrorable issuer registry design defined
 
 For source materials, see the repository directories `SPEC/`, `GOVERNANCE/`, and `TESTS/`.
+
+## Stewardship and Contact
+
+Passport Alliance was created by **Cory Gibson**, Founder, CEO, and CTO of **AetherPro Technologies**.
+
+Initial APIS and Passport work began as a Keycloak fork with the Legal-Based Access Control (LBAC) framework and is now opening to broader community participation.
+
+- Contributor and partnership inquiries: [partnerships@aetherpro.tech](mailto:partnerships@aetherpro.tech)
+- Issuer onboarding and operational inquiries: [operations@aetherpro.us](mailto:operations@aetherpro.us)

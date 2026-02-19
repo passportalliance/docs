@@ -42,6 +42,13 @@ pnpm run preview
 
 Deploy this site to `docs.passportalliance.org` (Vercel static deployment works out of the box).
 
+## Stewardship and Contact
+
+- Stewarded by AetherPro Technologies
+- Founder/CEO/CTO: Cory Gibson
+- Contributor and partnership inquiries: `partnerships@aetherpro.tech`
+- Issuer onboarding and operations: `operations@aetherpro.us`
+
 ## Repository Hygiene
 
 This repo intentionally does **not** track:

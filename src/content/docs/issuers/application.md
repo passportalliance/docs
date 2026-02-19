@@ -45,3 +45,9 @@ Prepare:
 ## After Approval
 
 Approved issuers are published in the signed registry with status and tier metadata.
+
+## Submission Contact
+
+For issuer application and operational coordination, contact [operations@aetherpro.us](mailto:operations@aetherpro.us).
+
+For strategic partnerships related to issuer programs, contact [partnerships@aetherpro.tech](mailto:partnerships@aetherpro.tech).
