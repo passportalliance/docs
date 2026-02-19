@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
+  site: 'https://docs.passportalliance.org',
   integrations: [
     starlight({
       title: 'Passport Alliance',
@@ -12,7 +13,7 @@ export default defineConfig({
       },
       customCss: ['./src/styles/custom.css'],
       social: {
-        github: 'https://github.com/passport-alliance'
+        github: 'https://github.com/passportalliance'
       }
     })
   ]

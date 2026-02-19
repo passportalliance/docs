@@ -1,32 +1,62 @@
-# Passport Alliance Documentation Site
+# Passport Alliance Docs
 
-This is the public documentation site for the Passport Alliance, built with Astro + Starlight.
+Public documentation site for `docs.passportalliance.org`, built with Astro + Starlight.
 
-## Scripts
+## Purpose
 
-- `npm install`
-- `npm run dev`
-- `npm run build`
-- `npm run preview`
-- `npm run check`
+This repository hosts APIS specification docs, governance docs, issuer requirements, and developer integration content.
 
-## Content Structure
+## Stack
 
-Content lives in `src/content/docs/`.
+- Astro 5
+- Starlight
+- Markdown content in `src/content/docs/`
 
-- `spec/` - APIS technical specification
-- `governance/` - Foundation governance and trust model
-- `issuers/` - Issuer onboarding and compliance requirements
-- `developers/` - Developer integration docs
-- `reference/` - OpenAPI/schema downloads and standards references
+## Local Development
 
-## Source Material
+1. Install dependencies:
+```bash
+pnpm install
+```
 
-This site is sourced from documents in the parent repository:
+2. Start dev server:
+```bash
+pnpm run dev
+```
 
-- `SPEC/`
-- `GOVERNANCE/`
-- `TESTS/`
-- `WEBSITE/content/`
+3. Build for production:
+```bash
+pnpm run build
+pnpm run preview
+```
 
-When those source docs change, update matching pages in `src/content/docs/` and the downloadable files under `public/`.
+## Content Layout
+
+- `src/content/docs/spec/` - APIS specification pages
+- `src/content/docs/governance/` - Governance and trust model
+- `src/content/docs/issuers/` - Issuer requirements and onboarding
+- `src/content/docs/developers/` - Developer docs
+- `src/content/docs/reference/` - Reference artifacts and standards context
+
+## Deployment
+
+Deploy this site to `docs.passportalliance.org` (Vercel static deployment works out of the box).
+
+## Repository Hygiene
+
+This repo intentionally does **not** track:
+
+- `node_modules/`
+- `.astro/`
+- `dist/`
+- local `.env*` files
+
+See `.gitignore` for full rules.
+
+## License
+
+Licensed under Apache License 2.0. See `LICENSE`.
+
+## Trademark Notice
+
+`Passport` and `Passport Alliance` names and logos are trademarks of Passport Alliance. The Apache-2.0 license does not grant trademark rights.
