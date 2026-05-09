@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "APIS v2.0 Agent Passport",
+  "type": "object",
+  "required": [
+    "passport_id",
+    "passport_did",
+    "issuer_id",
+    "realm",
+    "issued_at",
+    "status",
+    "public_key",
+    "key_fingerprint",
+    "principal_id",
+    "revocation_nonce",
+    "trust_tier"
+  ],
+  "properties": {
+    "passport_id": { "type": "string" },
+    "passport_did": {
+      "type": "string",
+      "pattern": "^did:passport:[^:]+:[^:]+$"
+    },
+    "issuer_id": { "type": "string" },
+    "realm": { "type": "string" },
+    "issued_at": { "type": "string", "format": "date-time" },
+    "expires_at": { "type": "string", "format": "date-time" },
+    "status": {
+      "type": "string",
+      "enum": ["active", "suspended", "revoked"]
+    },
+    "public_key": { "type": "object" },
+    "key_fingerprint": { "type": "string" },
+    "principal_id": { "type": "string" },
+    "mandate_id": { "type": "string" },
+    "machine_passport_id": { "type": "string" },
+    "trust_tier": {
+      "type": "string",
+      "enum": [
+        "tier1-tpm",
+        "tier2-vtpm",
+        "tier2_5-dnssec",
+        "tier3-software-hsm",
+        "tier4-development"
+      ]
+    },
+    "memory_anchor_id": { "type": "string" },
+    "revocation_nonce": { "type": "integer", "minimum": 0 },
+    "software_id": { "type": "string" },
+    "software_version": { "type": "string" },
+    "framework": { "type": "string" },
+    "model_id": { "type": "string" },
+    "hardware_attestation": { "type": "object" },
+    "dnssec_record": { "type": "string" }
+  },
+  "additionalProperties": true
+}

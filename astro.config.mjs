@@ -5,8 +5,8 @@ export default defineConfig({
   site: 'https://docs.passportalliance.org',
   integrations: [
     starlight({
-      title: 'Passport Alliance',
-      description: 'The identity standard for AI agents.',
+      title: 'Passport Alliance™',
+      description: 'APIS v2.0 documentation for verifiable AI agent identity, trust anchors, mandates, verification, and revocation.',
       favicon: '/favicon.ico',
       head: [
         {
@@ -29,7 +29,7 @@ export default defineConfig({
       ],
       logo: {
         src: './src/assets/passport-alliance-logo.svg',
-        alt: 'Passport Alliance'
+        alt: 'Passport Alliance™'
       },
       customCss: ['./src/styles/custom.css'],
       social: {

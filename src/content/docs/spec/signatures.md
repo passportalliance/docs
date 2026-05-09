@@ -13,11 +13,13 @@ The three-party signature model provides non-repudiation and clear chain-of-cust
 2. Principal signature on mandate
 3. Delegate signature on action request
 
+APIS v2.0 verification also evaluates Machine Passport linkage, trust tier evidence, issuer JWKS, status endpoint output, and credential-chain validity.
+
 ## Signature Layers
 
 ### Layer 1: Issuer
 
-- Target: Agent Passport
+- Target: Agent Passport™
 - Purpose: asserts delegate identity and issuer trust origin
 
 ### Layer 2: Principal
@@ -42,6 +44,8 @@ The three-party signature model provides non-repudiation and clear chain-of-cust
 verify_delegate_signature(action)
 verify_principal_signature(mandate)
 verify_issuer_signature(passport)
+verify_machine_passport(passport.machine_passport_id)
+verify_trust_tier(policy.minimum_trust_tier)
 verify_mandate_scope(action, mandate)
 verify_passport_status(passport_did, revocation_nonce)
 ```

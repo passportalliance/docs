@@ -1,24 +1,25 @@
 ---
 title: Federation Trust
-description: Realm-local trust today, signed registry federation path for broader interoperability.
+description: Realm-scoped APIS v2.0 trust, signed registry federation, and verifier policy.
 sidebar:
   order: 7
 ---
 
-## v1 Trust Model
+## APIS v2.0 Trust Model
 
-APIS v1 uses realm-local trust decisions.
+APIS v2.0 uses realm-scoped trust decisions. A realm is the issuer-controlled namespace in `did:passport:[realm]:[uuid]`.
 
 Each realm maintains a `trusted_issuers` set with issuer IDs and key metadata. A credential is accepted only when:
 
 - issuer signature is valid
 - issuer is trusted in local policy
 - passport status is active
+- Machine Passport and trust-tier evidence meet local policy
 - mandate policy permits requested action
 
 ## Registry-Assisted Federation
 
-Passport Alliance governance adds a signed issuer registry that can be consumed by verifiers and mirrored by members.
+Passport Alliance™ governance adds a signed issuer registry that can be consumed by verifiers and mirrored by members.
 
 Canonical endpoints:
 
@@ -33,7 +34,8 @@ Example verifier policy:
 
 ```json
 {
-  "trusted_tiers": ["founding", "certified"],
+  "trusted_issuer_levels": ["founding", "certified"],
+  "minimum_agent_trust_tier": "tier2_5-dnssec",
   "allow_registered_in": ["sandbox"]
 }
 ```

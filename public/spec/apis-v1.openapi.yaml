@@ -1,10 +1,10 @@
 openapi: 3.1.0
 info:
-  title: Passport Alliance - APIS v1 Issuer API
+  title: Passport Alliance - APIS v1 Issuer API (Superseded)
   version: "1.0"
   description: |
-    Reference OpenAPI definition for APIS v1 compliant issuers.
-    This spec defines the minimum endpoints required to issue, verify, and revoke Agent Passports.
+    Historical OpenAPI definition for APIS v1 issuers. APIS v2.0 is the current canonical standard and supersedes this artifact.
+    This spec defines the minimum endpoints required to issue, verify, and revoke Agent Passport™ credentials.
 
 servers:
   - url: https://issuer.example.com
@@ -70,7 +70,7 @@ paths:
   /v1/passports:
     post:
       tags: [issuance]
-      summary: Mint an Agent Passport
+      summary: Mint an Agent Passport™
       description: |
         Step 2 of PoP. Requester submits public_key + signed nonce.
         Issuer verifies PoP, then mints a passport if requirements are met.
@@ -408,4 +408,3 @@ components:
         software_version:
           type: string
           nullable: true
-

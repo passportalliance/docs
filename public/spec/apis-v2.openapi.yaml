@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: Passport Alliance APIS v2.0 Issuer API
+  version: "2.0"
+  description: >
+    Reference API surface for APIS v2.0 Realm Issuers implementing APIS-APP
+    passport-init, passport-renew, passport-revoke, passport status, JWKS, and
+    credential verification support.
+servers:
+  - url: https://issuer.example.com
+paths:
+  /v2/passport-init:
+    post:
+      summary: Start APIS-APP provisioning
+      responses:
+        "200":
+          description: Provisioning challenge and issuer metadata.
+  /v2/passport-init/challenge:
+    post:
+      summary: Submit signed challenge and trust-tier evidence
+      responses:
+        "200":
+          description: Signed Agent Passport and optional Machine Passport reference.
+  /v2/passports:
+    post:
+      summary: Mint an Agent Passport through direct API integration
+      responses:
+        "201":
+          description: Agent Passport created.
+  /v2/passports/{passport_did}:
+    get:
+      summary: Resolve an Agent Passport by DID
+      parameters:
+        - name: passport_did
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Agent Passport credential.
+  /v2/passports/{passport_did}/status:
+    get:
+      summary: Return current status and revocation nonce
+      parameters:
+        - name: passport_did
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Passport status response.
+  /v2/passports/{passport_did}/renew:
+    post:
+      summary: Renew an Agent Passport
+      parameters:
+        - name: passport_did
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Renewed credential or renewal challenge.
+  /v2/passports/{passport_did}/revoke:
+    post:
+      summary: Revoke an Agent Passport by incrementing revocation nonce
+      parameters:
+        - name: passport_did
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Revocation status.

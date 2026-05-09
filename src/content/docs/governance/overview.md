@@ -1,15 +1,17 @@
 ---
 title: Governance Overview
-description: Passport Alliance governance model, committee structure, and issuer tiers.
+description: Passport Alliance™ governance model, committee structure, Realm Issuers, and root trust anchor.
 sidebar:
   order: 1
 ---
 
 ## Governance Intent
 
-Passport Alliance governance is designed to keep APIS open while preventing trust fragmentation and spoofed issuer legitimacy.
+Passport Alliance™ governance is designed to keep APIS v2.0 open while preventing trust fragmentation and spoofed issuer legitimacy.
 
 The Alliance does not prevent protocol implementation. It governs recognition in the public trust registry.
+
+The Alliance also maintains the governance model for the root trust anchor, recognized Realm Issuers, and versioned APIS publications.
 
 ## Committees
 
@@ -29,9 +31,9 @@ The Alliance does not prevent protocol implementation. It governs recognition in
 
 Ad-hoc groups for focused domains such as security, enterprise, government, and AI safety.
 
-## Issuer Tiers
+## Realm Issuer Recognition
 
-| Tier | Description |
+| Level | Description |
 | --- | --- |
 | `founding` | Original standards initiator |
 | `certified` | Fully audited APIS issuer |
@@ -42,7 +44,7 @@ Ad-hoc groups for focused domains such as security, enterprise, government, and 
 
 To maintain certified status, issuers must:
 
-- implement APIS v1 required fields and flows
+- implement APIS v2.0 required fields and flows
 - pass automated conformance suite
 - complete security review
 - publish issuance/revocation/key policies

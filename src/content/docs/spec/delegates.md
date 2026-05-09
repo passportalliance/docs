@@ -11,6 +11,8 @@ A delegate is a software agent that can prove key possession, accept mandates, s
 
 Framework or hosting stack does not determine eligibility.
 
+APIS v2.0 identity attaches to the credential chain and keypair, not to the model, harness, or hosting framework.
+
 ## Qualification Criteria
 
 An agent qualifies for APIS issuance only if it can:
@@ -28,6 +30,8 @@ Delegates should expose:
 - stable passport DID
 - key identifier/fingerprint
 - current active mandate identifiers
+- current Machine Passport reference, when present
+- declared trust tier
 - signing evidence on protected actions
 
 ## Operational Constraints
