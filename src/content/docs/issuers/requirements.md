@@ -1,6 +1,6 @@
 ---
 title: Issuer Requirements
-description: Technical and governance controls required for APIS v2.0 Realm Issuer participation.
+description: Technical and governance controls required for APIS v2.1 Realm Issuer participation.
 sidebar:
   order: 2
 ---

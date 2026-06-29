@@ -6,7 +6,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Passport Alliance™',
-      description: 'APIS v2.0 documentation for verifiable AI agent identity, trust anchors, mandates, verification, and revocation.',
+      description: 'APIS v2.1 documentation for verifiable AI agent identity, trust anchors, mandates, profiles, verification, and revocation.',
       favicon: '/favicon.ico',
       head: [
         {

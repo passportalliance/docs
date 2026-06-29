@@ -1,15 +1,15 @@
 ---
 title: Developer Quickstart
-description: Provision APIS v2.0 passports, bind mandates, and verify signed actions.
+description: Provision APIS v2.1 passports, select profiles, bind mandates, and verify signed actions.
 sidebar:
   order: 1
 ---
 
 ## 5-Minute Flow
 
-This quickstart covers the minimum APIS v2.0 integration path:
+This quickstart covers the minimum APIS v2.1 integration path:
 
-1. Select a realm and trust tier
+1. Select a realm, profile, and trust tier
 2. Run APIS-APP `passport-init` to register machine and agent context
 3. Sign issuer challenge with the agent private key
 4. Mint Agent Passport™ and optional Machine Passport
@@ -21,6 +21,7 @@ This quickstart covers the minimum APIS v2.0 integration path:
 passport-init provision \
   --issuer https://issuer.example.com \
   --realm example.com \
+  --profile invoice.agent.v1 \
   --principal principal-123 \
   --agent-name invoice-agent-001 \
   --tier tier2_5-dnssec
@@ -38,7 +39,7 @@ curl -X POST https://issuer.example.com/v2/passport-init/challenge \
   -d @signed-challenge.json
 ```
 
-The request includes `public_key`, `signed_nonce`, `realm`, `principal_id`, requested `trust_tier`, mandate context, and any TPM/vTPM/DNSSEC/software custody evidence.
+The request includes `public_key`, `signed_nonce`, `realm`, `profile_id`, `principal_id`, requested `trust_tier`, mandate context, and any TPM, vTPM, DNSSEC, HTTPS namespace, confidential-compute, or software custody evidence.
 
 ## Step 3: Install Passports
 
@@ -77,7 +78,7 @@ client = PassportClient(
 
 result = client.verify_action(
     action="email.send",
-    payload={"to": "ops@example.com", "subject": "APIS v2.0 test"},
+    payload={"to": "ops@example.com", "subject": "APIS v2.1 test"},
     minimum_trust_tier="tier2_5-dnssec"
 )
 

@@ -23,9 +23,10 @@ APIS composes existing identity and cryptographic standards for machine-actor de
 
 ## Governance Position
 
-Passport Alliance governance follows a familiar pattern used by successful standards ecosystems:
+Passport Alliance™ governance follows a familiar pattern used by successful standards ecosystems:
 
 - technical specification
+- profile catalog and reference artifacts
 - reference implementation
 - conformance suite
 - transparent membership and change process

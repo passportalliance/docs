@@ -1,9 +1,9 @@
 openapi: 3.1.0
 info:
-  title: Passport Alliance APIS v2.0 Issuer API
-  version: "2.0"
+  title: Passport Alliance APIS v2.1 Issuer API Baseline
+  version: "2.1"
   description: >
-    Reference API surface for APIS v2.0 Realm Issuers implementing APIS-APP
+    Reference API surface for APIS v2.1 Realm Issuers implementing APIS-APP
     passport-init, passport-renew, passport-revoke, passport status, JWKS, and
     credential verification support.
 servers:

@@ -13,7 +13,7 @@ The three-party signature model provides non-repudiation and clear chain-of-cust
 2. Principal signature on mandate
 3. Delegate signature on action request
 
-APIS v2.0 verification also evaluates Machine Passport linkage, trust tier evidence, issuer JWKS, status endpoint output, and credential-chain validity.
+APIS v2.1 verification also evaluates Machine Passport linkage, trust tier evidence, issuer JWKS, status endpoint output, and credential-chain validity.
 
 ## Signature Layers
 

@@ -1,13 +1,13 @@
 ---
 title: Federation Trust
-description: Realm-scoped APIS v2.0 trust, signed registry federation, and verifier policy.
+description: Realm-scoped APIS v2.1 trust, signed registry federation, and verifier policy.
 sidebar:
   order: 7
 ---
 
-## APIS v2.0 Trust Model
+## APIS v2.1 Trust Model
 
-APIS v2.0 uses realm-scoped trust decisions. A realm is the issuer-controlled namespace in `did:passport:[realm]:[uuid]`.
+APIS v2.1 uses realm-scoped trust decisions. A realm is the issuer-controlled namespace in `did:passport:[realm]:[uuid]`.
 
 Each realm maintains a `trusted_issuers` set with issuer IDs and key metadata. A credential is accepted only when:
 

@@ -1,6 +1,6 @@
 ---
 title: Issuer Overview
-description: Realm Issuer roles, recognition levels, and APIS v2.0 ecosystem responsibilities.
+description: Realm Issuer roles, recognition levels, and APIS v2.1 ecosystem responsibilities.
 sidebar:
   order: 1
 ---
@@ -28,7 +28,7 @@ Realm Issuers establish cryptographic identity for delegates by minting Agent Pa
 | Registered | Self-attested | Controlled partner/sandbox |
 | Sandbox | Development only | Testing and integration |
 
-Trust tiers describe key custody and machine identity evidence. Issuer recognition describes governance posture. APIS v2.0 keeps those concepts separate.
+Trust tiers describe key custody and machine identity evidence. Issuer recognition describes governance posture. APIS v2.1 keeps those concepts separate.
 
 ## Interoperability Principle
 

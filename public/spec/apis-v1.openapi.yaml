@@ -3,7 +3,7 @@ info:
   title: Passport Alliance - APIS v1 Issuer API (Superseded)
   version: "1.0"
   description: |
-    Historical OpenAPI definition for APIS v1 issuers. APIS v2.0 is the current canonical standard and supersedes this artifact.
+    Historical OpenAPI definition for APIS v1 issuers. APIS v2.1 is the current canonical standard and supersedes this artifact.
     This spec defines the minimum endpoints required to issue, verify, and revoke Agent Passport™ credentials.
 
 servers:

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "APIS v1 Agent Passport (Superseded by APIS v2.0)",
+  "title": "APIS v1 Agent Passport (Superseded by APIS v2.1)",
   "type": "object",
   "required": [
     "passport_id",

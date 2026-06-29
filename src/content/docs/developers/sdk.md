@@ -21,8 +21,8 @@ APIS integrations rely on a small set of canonical endpoints:
 
 ## Artifacts
 
-- [APIS v2.0 OpenAPI](/spec/apis-v2.openapi.yaml)
-- [APIS v2.0 JSON Schema](/spec/apis-v2.schema.json)
+- [APIS v2.1 OpenAPI baseline](/spec/apis-v2.openapi.yaml)
+- [APIS v2.1 JSON Schema baseline](/spec/apis-v2.schema.json)
 - [Registry OpenAPI](/spec/registry.openapi.json)
 
 ## Verifier SDK Responsibilities

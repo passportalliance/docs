@@ -7,7 +7,7 @@ sidebar:
 
 ## Governance Intent
 
-Passport Alliance™ governance is designed to keep APIS v2.0 open while preventing trust fragmentation and spoofed issuer legitimacy.
+Passport Alliance™ governance is designed to keep APIS v2.1 open while preventing trust fragmentation and spoofed issuer legitimacy.
 
 The Alliance does not prevent protocol implementation. It governs recognition in the public trust registry.
 
@@ -44,7 +44,7 @@ Ad-hoc groups for focused domains such as security, enterprise, government, and 
 
 To maintain certified status, issuers must:
 
-- implement APIS v2.0 required fields and flows
+- implement APIS v2.1 required fields and flows
 - pass automated conformance suite
 - complete security review
 - publish issuance/revocation/key policies
@@ -55,3 +55,13 @@ To maintain certified status, issuers must:
 The Alliance publishes a signed issuer registry used by verifiers as trust input. Member mirrors can distribute copies, but only Alliance keys sign authoritative changes.
 
 See [Registry Signing Model](/governance/registry-signing/) for details.
+
+## Agent Registry Direction
+
+The issuer registry is live as a governance concept today. A broader public Agent Registry can build on the same signing model later by separating:
+
+- issuer recognition
+- Agent Passport Profile publication
+- minted passport or proof references for specific agents
+
+That keeps governance and verification clear: profiles describe what an agent class is supposed to be, while minted passports prove what a specific agent instance actually is.

@@ -1,25 +1,26 @@
 ---
 title: Specification Overview
-description: High-level architecture and trust model for canonical APIS v2.0.
+description: High-level architecture and trust model for canonical APIS v2.1.
 sidebar:
   order: 1
 ---
 
 ## APIS Scope
 
-APIS v2.0 defines a portable, verifiable, and revocable identity model for autonomous software agents. It is runtime-agnostic, model-agnostic, and framework-agnostic.
+APIS v2.1 defines a portable, verifiable, and revocable identity model for autonomous software agents. It is runtime-agnostic, model-agnostic, and framework-agnostic.
 
 Core objective: make it possible for any verifier to evaluate trust with consistent cryptographic and policy signals.
 
-APIS v2.0 supersedes APIS v1.0. Version 2.0 adds realm-scoped DIDs, Machine Passports, hardware and DNS trust anchors, APIS-APP automated provisioning, and a formal trust-tier model.
+APIS v2.1 supersedes APIS v2.0. Version 2.1 adds confidential-compute attestation coverage, algorithmic tier resolution, provider-neutral DNS and HTTPS namespace proof, and a verified reference proof for a first minted passport while preserving the core APIS model.
 
 ## Canonical Citation
 
-- Canonical spec PDF: [Passport Alliance Specification (APIS v2.0)](/spec/APIS-v2.0.pdf)
-- Implementation guide PDF: [APIS v2.0 Implementation Guide](/spec/APIS-v2.0-Implementation-Guide.pdf)
-- DOI: [`10.5281/zenodo.18820877`](https://doi.org/10.5281/zenodo.18820877)
-- Published: May 4, 2026
-- Status: Version 2.0 — Canonical — Supersedes APIS v1.0
+- Canonical DOI: [`10.5281/zenodo.21042004`](https://doi.org/10.5281/zenodo.21042004)
+- Concept DOI: [`10.5281/zenodo.18820876`](https://doi.org/10.5281/zenodo.18820876)
+- Local PDF artifact: [Passport Alliance Specification (APIS v2.0)](/spec/APIS-v2.0.pdf)
+- Local implementation guide: [APIS v2.0 Implementation Guide](/spec/APIS-v2.0-Implementation-Guide.pdf)
+- Published: June 29, 2026
+- Status: Version 2.1 — Canonical — Supersedes APIS v2.0
 
 ## Domain Entities
 
@@ -31,6 +32,9 @@ APIS uses these primary entities:
 4. `Mandate`: Scoped authorization linking principal intent to delegate actions.
 5. `Machine Passport`: Credential binding a machine or registered node to a trust anchor.
 6. `Realm`: Issuer-controlled namespace for DIDs, keys, policies, and status endpoints.
+7. `Agent Passport Profile`: Issuance recipe describing the class of agent a passport is meant to represent.
+8. `Registry Entry`: Public verification record describing a profile, proof artifact, or minted passport reference.
+9. `Proof Artifact`: Evidence package or signed/public artifact used to support verification.
 
 ## Three-Layer Identity Model
 
@@ -56,14 +60,26 @@ A verifier should execute this sequence:
 | Tier | Anchor | Intended Use |
 | --- | --- | --- |
 | Tier 1 | Physical TPM 2.0 | Highest-assurance machine-bound identity |
-| Tier 2 | Virtual TPM | Cloud or virtualized environments with platform attestation |
+| Tier 1.5 | Attestable vTPM | Cloud or virtualized environments with rooted attestation chains |
+| Tier 2.0 | Confidential compute | SEV-SNP or TDX-class hardware-signed measurement environments |
 | Tier 2.5 | DNSSEC-anchored identity | Domain-controlled agent identity where TPM access is unavailable |
 | Tier 3 | Software HSM | Internal production or controlled environments |
 | Tier 4 | Development/software key | Development, tests, and low-risk automation |
 
+## Profiles and Registry Readiness
+
+APIS now distinguishes between:
+
+- the **minted Agent Passport™**, which is the signed credential bound to a specific delegate key
+- the **Agent Passport Profile**, which is the reusable issuance recipe or class definition for that delegate type
+
+This split makes it easier to build an eventual Agent Registry without confusing a class of agents with a single credential instance. See [Agent Passport Profiles](/spec/profiles/).
+
+For vocabulary used across the publication surface, see [Vocabulary](/reference/vocabulary/).
+
 ## Compliance Baseline
 
-An APIS v2.0-compliant Realm Issuer must support:
+An APIS v2.1-compliant Realm Issuer must support:
 
 - Proof-of-possession challenge at issuance
 - Public JWKS publication
@@ -77,6 +93,7 @@ An APIS v2.0-compliant Realm Issuer must support:
 Continue with:
 
 - [Agent Passport™](/spec/agent-passport/)
+- [Agent Passport Profiles](/spec/profiles/)
 - [Mandates](/spec/mandates/)
 - [Three-Party Signatures](/spec/signatures/)
 - [Federation Trust](/spec/federation/)

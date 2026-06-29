@@ -11,7 +11,7 @@ A delegate is a software agent that can prove key possession, accept mandates, s
 
 Framework or hosting stack does not determine eligibility.
 
-APIS v2.0 identity attaches to the credential chain and keypair, not to the model, harness, or hosting framework.
+APIS v2.1 identity attaches to the credential chain and keypair, not to the model, harness, or hosting framework.
 
 ## Qualification Criteria
 

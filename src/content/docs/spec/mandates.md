@@ -11,7 +11,7 @@ A mandate is a principal-signed authorization describing what a delegate can do,
 
 Mandates prevent blank-check agent access.
 
-APIS v2.0 treats the principal / mandate / delegate relationship as the core legal and technical authorization model.
+APIS v2.1 treats the principal / mandate / delegate relationship as the core legal and technical authorization model.
 
 ## Minimum Mandate Fields
 

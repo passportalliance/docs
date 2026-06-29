@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "APIS v2.0 Agent Passport",
+  "title": "APIS v2.1 Agent Passport Baseline",
   "type": "object",
   "required": [
     "passport_id",
@@ -38,7 +38,8 @@
       "type": "string",
       "enum": [
         "tier1-tpm",
-        "tier2-vtpm",
+        "tier1_5-vtpm",
+        "tier2_0-confidential",
         "tier2_5-dnssec",
         "tier3-software-hsm",
         "tier4-development"

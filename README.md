@@ -4,14 +4,15 @@ Public documentation site for `docs.passportalliance.org`, built with Astro + St
 
 ## Purpose
 
-This repository hosts APIS v2.0 specification docs, governance docs, Realm Issuer requirements, developer integration content, and public reference artifacts.
+This repository hosts APIS v2.1 specification docs, governance docs, Realm Issuer requirements, developer integration content, public reference artifacts, and early documentation for Agent Passport Profiles and registry patterns.
 
 Current canonical publication:
 
-- **Title:** Passport Alliance Specification (APIS v2.0): Agent Passport Issuance Standard with Hardware Trust Anchors and Universal Framework Interoperability
-- **DOI:** https://doi.org/10.5281/zenodo.18820877
-- **Published:** May 4, 2026
-- **Status:** Version 2.0 — Canonical — Supersedes APIS v1.0
+- **Title:** Passport Alliance Specification (APIS v2.1): Agent Passport Issuance Standard with Hardware Trust Anchors and Universal Framework Interoperability
+- **DOI:** https://doi.org/10.5281/zenodo.21042004
+- **Concept DOI:** https://doi.org/10.5281/zenodo.18820876
+- **Published:** June 29, 2026
+- **Status:** Version 2.1 — Canonical — Supersedes APIS v2.0
 
 ## Stack
 
@@ -39,7 +40,7 @@ pnpm run preview
 
 ## Content Layout
 
-- `src/content/docs/spec/` - APIS v2.0 specification pages
+- `src/content/docs/spec/` - APIS v2.1 specification pages
 - `src/content/docs/governance/` - Governance and trust model
 - `src/content/docs/issuers/` - Issuer requirements and onboarding
 - `src/content/docs/developers/` - Developer docs

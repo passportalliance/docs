@@ -1,0 +1,8 @@
+{
+  "status": "pending_publication",
+  "kid": "apis-root-v1.0-202602",
+  "expected_fingerprint_sha256": "515f10f4b8bbdf7e24bbb1acf05e6d3a8ebc4eba9e24a6d60e33285f4c463c8c",
+  "root_key_well_known_url": "https://docs.passportalliance.org/.well-known/alliance-root.jwk",
+  "note": "Placeholder record. Replace with the published Alliance root public JWK before production trust decisions.",
+  "last_updated": "2026-03-01"
+}

@@ -7,9 +7,11 @@ sidebar:
 
 ## Purpose
 
-The Passport Alliance registry is the authoritative list of recognized APIS issuers.
+The Passport Alliance™ registry is the authoritative list of recognized APIS issuers.
 
 The model is built to prevent spoofed issuer legitimacy while allowing broad implementation of APIS.
+
+Today this page covers the signed issuer registry. The same pattern can later be extended to profile catalogs or agent reference entries, but those should remain distinct payloads so issuer governance is not confused with individual agent identity state.
 
 ## Registry Endpoints
 

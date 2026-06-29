@@ -1,15 +1,15 @@
 ---
 title: Agent Passport™ Credential
-description: APIS v2.0 Agent Passport and Machine Passport credential structure, issuance requirements, and lifecycle semantics.
+description: APIS v2.1 Agent Passport and Machine Passport credential structure, issuance requirements, lifecycle semantics, and profile relationship.
 sidebar:
   order: 2
 ---
 
 ## APIS-001
 
-The Agent Passport™ is the canonical credential for delegate identity in APIS v2.0. It is paired with a Machine Passport when the agent key is anchored to a machine, virtual machine, DNSSEC domain, software HSM, or development key.
+The Agent Passport™ is the canonical credential for delegate identity in APIS v2.1. It is paired with a Machine Passport when the agent key is anchored to a machine, virtual machine, DNSSEC domain, software HSM, confidential-compute environment, or development key.
 
-- Status: Version 2.0 — Canonical — Supersedes APIS v1.0
+- Status: Version 2.1 — Canonical — Supersedes APIS v2.0
 - DID format: `did:passport:[realm]:[uuid]`
 - Signature algorithm: Ed25519 recommended (P-256 acceptable)
 
@@ -28,7 +28,7 @@ The Agent Passport™ is the canonical credential for delegate identity in APIS 
 | `principal_id` | Principal accountable for delegate actions |
 | `mandate_id` | Principal authorization binding this delegate to scoped authority |
 | `machine_passport_id` | Machine Passport binding when applicable |
-| `trust_tier` | `tier1-tpm`, `tier2-vtpm`, `tier2_5-dnssec`, `tier3-software-hsm`, or `tier4-development` |
+| `trust_tier` | `tier1-tpm`, `tier1_5-vtpm`, `tier2_0-confidential`, `tier2_5-dnssec`, `tier3-software-hsm`, or `tier4-development` |
 | `memory_anchor_id` | Continuity anchor identifier |
 | `revocation_nonce` | Monotonic nonce for instant token invalidation |
 
@@ -44,6 +44,15 @@ The Agent Passport™ is the canonical credential for delegate identity in APIS 
 - `dnssec_record`
 - issuer-defined extension claims
 
+## Profile Relationship
+
+An Agent Passport Profile is not the passport itself.
+
+- A **profile** describes the issuance recipe, agent class, capability envelope, and policy defaults.
+- A **minted passport** is the signed credential issued to one concrete agent instance.
+
+Profiles make registry publication cleaner because verifiers can understand what class of agent they are evaluating before they inspect a specific passport artifact. See [Agent Passport Profiles](/spec/profiles/).
+
 ## Issuance Requirements
 
 A valid issuance flow must include:
@@ -56,9 +65,10 @@ A valid issuance flow must include:
    3. Issuer verifies signature before minting.
 4. Trust-tier evidence:
    1. Tier 1: TPM quote and certificate chain.
-   2. Tier 2: vTPM or platform attestation.
-   3. Tier 2.5: DNSSEC-signed TXT record binding key fingerprint to the realm.
-   4. Tier 3/4: software custody declaration.
+   2. Tier 1.5: attestable vTPM evidence and cert chain.
+   3. Tier 2.0: confidential-compute attestation such as SEV-SNP or TDX quote.
+   4. Tier 2.5: DNSSEC or HTTPS namespace proof binding key fingerprint to the realm.
+   5. Tier 3/4: software custody declaration.
 
 No proof-of-possession means no passport.
 

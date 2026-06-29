@@ -9,7 +9,7 @@ sidebar:
 
 A principal is the legally accountable entity for delegate behavior. Principals can be organizations or humans depending on policy context.
 
-In APIS v2.0, the principal grants a mandate to a delegate agent and remains the accountable authority for the agent's authorized actions.
+In APIS v2.1, the principal grants a mandate to a delegate agent and remains the accountable authority for the agent's authorized actions.
 
 ## Responsibilities
 

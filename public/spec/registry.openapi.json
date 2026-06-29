@@ -1,9 +1,9 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Passport Alliance Registry API",
+    "title": "Passport Alliance™ Registry API",
     "version": "v1",
-    "description": "Public, read-only API for the Passport Alliance issuer registry."
+    "description": "Public, read-only API for the Passport Alliance™ issuer registry."
   },
   "servers": [
     {
