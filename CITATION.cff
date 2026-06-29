@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: "Passport Alliance Specification (APIS): Agent Passport Issuance Standard"
+message: "If you reference the APIS standard, please cite the Zenodo record below."
+type: report
+authors:
+  - family-names: Gibson
+    given-names: "Cory M."
+    affiliation: "AetherPro Technologies LLC"
+    orcid: "https://orcid.org/0009-0005-9685-2594"
+version: "2.1"
+date-released: "2026-06-29"
+license: CC-BY-4.0
+url: "https://passportalliance.org"
+repository-code: "https://github.com/passportalliance/docs"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21042004"
+    description: "APIS v2.1 (this version)"
+  - type: doi
+    value: "10.5281/zenodo.18820876"
+    description: "Concept DOI — always resolves to the latest APIS version"
+abstract: "APIS (the Agent Passport Issuance Standard), published by Passport Alliance, is a cryptographic identity framework for autonomous AI agents: a credential chain of issuer, principal, delegate, mandate, machine/domain binding, and a signed agent passport, with algorithmic attestation tiers (TPM / confidential-compute / DNS-anchored), provider-neutral namespace proof, and model-scope mandates. v2.1 adds Tier 2.0 confidential-compute attestation, algorithmic tier resolution, provider-neutral DNS/HTTPS namespace proof, and a verified reference proof (Herman)."
+preferred-citation:
+  type: report
+  title: "Passport Alliance Specification (APIS v2.1): Agent Passport Issuance Standard with Hardware Trust Anchors and Universal Framework Interoperability"
+  authors:
+    - family-names: Gibson
+      given-names: "Cory M."
+      affiliation: "AetherPro Technologies LLC"
+  year: 2026
+  version: "2.1"
+  doi: "10.5281/zenodo.21042004"
